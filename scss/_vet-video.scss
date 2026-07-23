@@ -2,13 +2,13 @@
   @include section-padding;
 
   &__inner {
-    @include container;              // ← ye left-right cream margin deta hai
+    @include container;             
     background-color: $color-navy;
-    border-radius: $radius-lg;       // ← ye corners round karta hai
+    border-radius: $radius-lg;     
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-    overflow: hidden;                // ← image ko bhi corners ke andar crop karta hai
+    overflow: hidden;               
     @include respond(laptop) { grid-template-columns: 1fr; }
   }
 

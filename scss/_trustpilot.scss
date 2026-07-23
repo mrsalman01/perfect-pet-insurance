@@ -1,15 +1,14 @@
 .trustpilot {
   @include section-padding;
-  background-color: $color-navy; // ← background wapas OUTER par
+  background-color: $color-navy; 
  border-top-left-radius: $radius-lg;
   border-top-right-radius: $radius-lg;
   color: $color-white;
 
   &__inner {
-    @include container; // ← ye ab SIRF content ko center/align karega
+    @include container; 
     padding: $space-lg;
     overflow: hidden;
-    // background-color aur border-radius YAHAN SE HATA DEIN
   }
 
   &__heading {

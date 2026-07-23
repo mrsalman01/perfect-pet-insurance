@@ -126,7 +126,7 @@ document.querySelectorAll('.perks__tab').forEach(function (tab) {
   });
 });
 
-// ---- FAQ accordion (event delegation — works even if items are added later) ----
+// ---- FAQ accordion 
 (function () {
   const faqList = document.querySelector('.faq__list');
   if (!faqList) return;
@@ -146,7 +146,7 @@ document.querySelectorAll('.perks__tab').forEach(function (tab) {
   if (!menuToggle || !nav) return;
 
   menuToggle.addEventListener('click', function (e) {
-    e.stopPropagation();   // ← ye line fix hai: is click ko document tak bubble hone se roakti hai
+    e.stopPropagation();  
     nav.classList.toggle('is-open');
     const isOpen = nav.classList.contains('is-open');
     menuToggle.setAttribute('aria-expanded', isOpen);

@@ -1,0 +1,68 @@
+.perks {
+  @include section-padding;
+  &__inner { @include container; }
+  &__header { text-align: center; margin-bottom: $space-md; }
+
+  &__tabs {
+    @include flex(center, center, $space-sm);
+    flex-wrap: wrap;
+    margin-bottom: $space-lg;
+    @include respond(mobile) { gap: $space-xs; }
+  }
+
+  &__tab {
+    @include flex(flex-start, center, 0.4rem);
+    background: none;
+    border: 1px solid $color-border;
+    border-radius: $radius-pill;
+    padding: 0.6rem 1.1rem;
+    font-size: $fs-sm;
+    font-weight: 500;
+    color: $color-muted;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover { border-color: $color-coral; color: $color-coral; }
+    &--active { background-color: $color-navy; border-color: $color-navy; color: $color-white; }
+  }
+
+  &__row { @include flex(space-between, center, $space-sm); }
+
+  // dark arrow, since Perks sits on a CREAM background (not navy)
+  &__arrow { @include slider-arrow($color-navy); }
+
+  &__viewport {
+    flex: 1;
+    overflow: hidden;
+    // fade mask: last ~12% of the viewport fades the peeking card to transparent
+    mask-image: linear-gradient(to right, black 0%, black 88%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 0%, black 88%, transparent 100%);
+  }
+
+  &__track {
+    display: flex;
+    gap: $space-md;
+    transition: transform 0.4s ease;
+  }
+
+  &__dots {
+    @include flex(center, center, 0.5rem);
+    margin-top: $space-lg;
+  }
+}
+
+.perk-card {
+  @include card;
+  padding: $space-md;
+  text-align: center;
+  // 30% instead of 33.33% → deliberately leaves room so a sliver of the
+  // next card "peeks" in from the right edge
+  flex: 0 0 calc(30% - #{$space-md * 2 / 3});
+
+  @include respond(tablet) { flex-basis: calc(46% - #{$space-md / 2}); }
+  @include respond(mobile) { flex-basis: 88%; }
+
+  &__icon  { font-size: 1.75rem; margin-bottom: $space-sm; color: $color-coral; }
+  &__title { font-size: $fs-lg; color: $color-coral; margin-bottom: $space-xs; }
+  &__text  { font-size: $fs-sm; }
+}

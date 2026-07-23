@@ -1,0 +1,77 @@
+// MIXINS — reusable blocks of CSS you @include wherever needed.
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $bp-mobile) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $bp-tablet) { @content; }
+  } @else if $breakpoint == laptop {
+    @media (max-width: $bp-laptop) { @content; }
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $container-width;
+  margin-inline: auto;
+  padding-inline: $space-md;
+  @include respond(mobile) { padding-inline: $space-sm; }
+}
+
+@mixin flex($justify: flex-start, $align: center, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  background-color: $color-coral;
+  color: $color-white;
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: $fs-body;
+  padding: 0.9rem 1.8rem;
+  border-radius: $radius-pill;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+
+  &:hover  { background-color: $color-coral-dark; transform: translateY(-2px); }
+  &:focus-visible { outline: 3px solid $color-navy; outline-offset: 2px; }
+}
+
+@mixin slider-arrow($color: $color-white) {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba($color, 0.25);
+  background-color: transparent;
+  color: $color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+
+  &:hover { background-color: rgba($color, 0.12); }
+  &:disabled { opacity: 0.3; cursor: not-allowed; }
+}
+
+@mixin card {
+  background-color: $color-white;
+  border-radius: $radius-md;
+  box-shadow: $shadow-card;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  &:hover { box-shadow: $shadow-card-hover; transform: translateY(-4px); }
+}
+
+// THIS IS THE VALUE THAT WAS TOO BIG — ab chhota kar diya hai
+@mixin section-padding {
+  padding-block: 2.5rem;
+  @include respond(tablet) { padding-block: 1.75rem; }
+}

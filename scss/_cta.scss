@@ -1,0 +1,56 @@
+// FINAL CTA
+
+.final-cta {
+  @include section-padding;
+
+  &__inner {
+  width: 100%;
+  background-color: $color-navy;
+  border-radius: $radius-lg;
+  padding: $space-lg;
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;     // ← pehle 1.2fr 0.9fr tha, ab image ko thoda bara space diya
+  align-items: center;
+  gap: $space-md;                         // ← pehle $space-lg tha, ab kam kiya — beech ka khali gap kam hoga
+  @include respond(laptop) { grid-template-columns: 1fr; text-align: center; gap: $space-xl; }
+}
+
+ &__content {
+  color: $color-white;
+  h2 { color: $color-white; margin-bottom: $space-sm; max-width: 22ch; @include respond(laptop) { margin-inline: auto; } }
+  p  { color: rgba($color-white, 0.8); margin-bottom: $space-md; }
+}
+
+  &__lock {
+    @include flex(flex-start, center, 0.4rem);
+    margin-top: $space-sm;
+    font-size: $fs-sm;
+    color: rgba($color-white, 0.6);
+    @include respond(laptop) { justify-content: center; }
+  }
+
+  // ---- the shaped photo mask ----
+  &__media {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    margin-inline: auto;
+    aspect-ratio: 1 / 1.05;
+  }
+
+  &__media-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: url(#pShapeClip);
+  }
+
+  &__squiggle {
+    position: absolute;
+    inset: -20%;
+    width: 140%;
+    height: 140%;
+    z-index: 1;
+    pointer-events: none;
+  }
+}

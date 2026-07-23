@@ -1,0 +1,87 @@
+// FOOTER
+
+.footer {
+  width: 100%;
+  background-color: $color-navy;
+  border-top-left-radius: $radius-lg;
+  border-top-right-radius: $radius-lg;
+  padding-top: $space-xl;
+  color: rgba($color-white, 0.7);
+
+  &__inner {
+    @include container;
+    display: grid;
+    grid-template-columns: 1.4fr repeat(3, 1fr);
+    gap: $space-lg;
+    padding-bottom: $space-xl;
+    @include respond(laptop) { grid-template-columns: repeat(2, 1fr); }
+    @include respond(mobile) { grid-template-columns: 1fr; }
+  }
+
+  &__brand {
+    @include flex(flex-start, center, 0.5rem);
+    font-family: $font-heading;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: $color-white;
+    margin-bottom: $space-md;
+  }
+
+  &__socials {
+    @include flex(flex-start, center, $space-xs);
+
+    a {
+      width: 42px;
+      height: 42px;
+      border-radius: $radius-sm;
+      background-color: $color-coral;
+      color: $color-white;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s ease;
+      &:hover { background-color: $color-coral-dark; }
+    }
+  }
+
+  &__heading {
+    color: rgba($color-white, 0.5);
+    font-family: $font-heading;
+    font-weight: 600;
+    font-size: $fs-body;
+    margin-bottom: $space-md;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    font-size: $fs-sm;
+
+    a { color: $color-white; }
+    a:hover { color: rgba($color-white, 0.7); }
+  }
+
+  &__bottom {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: $space-lg;
+    padding-bottom: $space-xl;
+    border-top: 1px solid rgba($color-white, 0.1);
+    padding-top: $space-lg;
+    font-size: $fs-sm;
+    @include respond(laptop) { grid-template-columns: 1fr; gap: $space-sm; }
+  }
+
+  &__copyright { color: $color-white; white-space: nowrap; }
+
+  &__legal {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+    color: rgba($color-white, 0.5);
+    line-height: 1.6;
+  }
+}

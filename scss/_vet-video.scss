@@ -1,0 +1,28 @@
+.vet-advice {
+  @include section-padding;
+
+  &__inner {
+    @include container;              // ← ye left-right cream margin deta hai
+    background-color: $color-navy;
+    border-radius: $radius-lg;       // ← ye corners round karta hai
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    overflow: hidden;                // ← image ko bhi corners ke andar crop karta hai
+    @include respond(laptop) { grid-template-columns: 1fr; }
+  }
+
+  &__content {
+    padding: $space-lg;
+    color: $color-white;
+    h2 { color: $color-white; margin-bottom: $space-sm; }
+    p  { color: rgba($color-white, 0.75); margin-bottom: $space-md; }
+  }
+
+  &__media {
+    height: 100%;
+    min-height: 260px;
+    img { width: 100%; height: 100%; object-fit: cover; }
+    @include respond(laptop) { min-height: 220px; }
+  }
+}

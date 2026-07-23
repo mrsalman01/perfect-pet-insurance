@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfect Pet Insurance</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="#" class="header__logo">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.8C.7 8.7 2.2 5 6 5c2 0 3.3 1.1 4 2 1.7-1.9 3-2 4-2 3.8 0 5.3 3.7 3.5 7.2C19 16.65 12 21 12 21z" fill="#e8543d"/></svg>
+      Perfect Pet
+    </a>
+    <nav class="header__nav" aria-label="Primary">
+      <a class="header__nav-link" href="#plans">Cover</a>
+      <a class="header__nav-link" href="#why">Why us</a>
+      <a class="header__nav-link" href="#perks">Perks</a>
+      <a class="header__nav-link" href="#faq">FAQs</a>
+      <a class="header__nav-link" href="#footer">Contact</a>
+    </nav>
+    <div class="header__actions">
+      <button class="header__menu-toggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <a href="#plans" class="btn-cta">Get a quote</a>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__content">
+      <span class="eyebrow">Cover that fits, from day one</span>
+      <h1 class="hero__title">Award-winning<br>Pet Insurance</h1>
+      <p class="hero__text">Rated Excellent on Trustpilot for cover that pays out fast, a 24/7 vet video line, and a policy your pet will actually thank you for.</p>
+      <a href="#plans" class="btn-cta">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="hero__trust"><i class="fa-solid fa-shield-heart" style="color:#e8543d;"></i> Trusted by over 200,000 pet owners across the UK</div>
+    </div>
+    <div class="hero__media">
+      <img src="https://picsum.photos/seed/petsofa1/700/560" alt="Owner relaxing on the sofa with their dog">
+    </div>
+  </div>
+</section>
+<section class="trustpilot">
+  <div class="trustpilot__inner">
+    <div class="trustpilot__heading">
+      <h2>Rated Excellent on Trustpilot</h2>
+      <div class="trustpilot__rating"><i class="fa-brands fa-trustpilot"></i> ★★★★★ 4.8 out of 5</div>
+    </div>
+
+    <div class="trustpilot__row">
+      <button class="trustpilot__arrow" id="tpPrev" aria-label="Previous reviews"><i class="fa-solid fa-chevron-left"></i></button>
+
+      <div class="trustpilot__viewport">
+        <div class="trustpilot__track" id="tpTrack">
+          <div class="trustpilot__card">
+            <div class="trustpilot__stars">★★★★★</div>
+            <p class="trustpilot__quote">Claim was sorted in under a week — no fuss at all.</p>
+          </div>
+          <div class="trustpilot__card">
+            <div class="trustpilot__stars">★★★★★</div>
+            <p class="trustpilot__quote">The vet video line saved us an unnecessary trip at 11pm.</p>
+          </div>
+          <div class="trustpilot__card">
+            <div class="trustpilot__stars">★★★★★</div>
+            <p class="trustpilot__quote">Switching over took five minutes and cover started the same day.</p>
+          </div>
+          <div class="trustpilot__card">
+            <div class="trustpilot__stars">★★★★★</div>
+            <p class="trustpilot__quote">Clear pricing, no jargon. Exactly what I wanted for my puppy.</p>
+          </div>
+          <div class="trustpilot__card">
+            <div class="trustpilot__stars">★★★★★</div>
+            <p class="trustpilot__quote">Our cat needed emergency care and the payout came through fast.</p>
+          </div>
+          <div class="trustpilot__card">
+            <div class="trustpilot__stars">★★★★★</div>
+            <p class="trustpilot__quote">Friendly support team, actually picked up the phone.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="trustpilot__arrow" id="tpNext" aria-label="Next reviews"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <div class="trustpilot__dots" id="tpDots"></div>
+  </div>
+</section>
+
+<section class="plans" id="plans">
+  <div class="plans__inner">
+    <div class="plans__header">
+      <div class="plans__heading">
+        <span class="eyebrow">Pick your pack</span>
+        <h2>Award Winning Insurance For Cats and Dogs</h2>
+        <p>We insure over 50,000 of the UK's dogs and cats to ensure your loved one is always covered.</p>
+      </div>
+      <div class="plans__badge">
+        <div class="plans__badge-icon"></div>
+        <div>Best pet insurance provider<br><strong>Winner 2025</strong></div>
+      </div>
+    </div>
+
+    <div class="plans__grid">
+      <div class="plan-card">
+        <div class="plan-card__top">
+          <img src="https://picsum.photos/seed/dogline1/260/220" alt="Illustration of a dog">
+        </div>
+        <div class="plan-card__bottom">
+          <h3 class="plan-card__title">Dog &amp; Puppy Insurance</h3>
+          <ul class="plan-card__list">
+            <li class="plan-card__list-item"><i class="fa-solid fa-circle-check"></i> Puppies covered from 4 weeks old</li>
+            <li class="plan-card__list-item"><i class="fa-solid fa-circle-check"></i> No upper age limit, even on lifetime policies</li>
+            <li class="plan-card__list-item"><i class="fa-solid fa-circle-check"></i> 5 Star Rated Elite Extra Plus Dog Insurance</li>
+          </ul>
+          <div class="plan-card__cta-wrap">
+            <a href="#" class="plan-card__cta">Get a quote <span><i class="fa-solid fa-arrow-right"></i></span></a>
+            <a href="#" class="plan-card__more">Learn more about dog insurance</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-card__top">
+          <img src="https://picsum.photos/seed/catline1/260/220" alt="Illustration of a cat">
+        </div>
+        <div class="plan-card__bottom">
+          <h3 class="plan-card__title">Cat &amp; Kitten Insurance</h3>
+          <ul class="plan-card__list">
+            <li class="plan-card__list-item"><i class="fa-solid fa-circle-check"></i> Kittens covered from 4 weeks old</li>
+            <li class="plan-card__list-item"><i class="fa-solid fa-circle-check"></i> Protection for both indoor and outdoor cats</li>
+            <li class="plan-card__list-item"><i class="fa-solid fa-circle-check"></i> Lifetime cover for cats of all ages</li>
+          </ul>
+          <div class="plan-card__cta-wrap">
+            <a href="#" class="plan-card__cta">Get a quote <span><i class="fa-solid fa-arrow-right"></i></span></a>
+            <a href="#" class="plan-card__more">Learn more about cat insurance</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-card__top">
+          <img src="https://picsum.photos/seed/multipet1/260/220" alt="Illustration of a cat and dog together">
+        </div>
+        <div class="plan-card__bottom">
+          <h3 class="plan-card__title">Multi-Pet Insurance</h3>
+          <ul class="plan-card__list">
+            <li class="plan-card__list-item"><i class="fa-solid fa-circle-check"></i> 15% Multi Pet insurance discount</li>
+            <li class="plan-card__list-item"><i class="fa-solid fa-circle-check"></i> Hassle free cover with one simple renewal</li>
+            <li class="plan-card__list-item"><i class="fa-solid fa-circle-check"></i> Save time and money on your pets'</li>
+          </ul>
+          <div class="plan-card__cta-wrap">
+            <a href="#" class="plan-card__cta">Get a quote <span><i class="fa-solid fa-arrow-right"></i></span></a>
+            <a href="#" class="plan-card__more">Learn more about multi-pet insurance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why__inner">
+    <div class="why__header">
+      <span class="eyebrow">Why choose us</span>
+      <h2>Why choose Perfect Pet Insurance?</h2>
+    </div>
+    <div class="why__grid">
+  <div class="why__item">
+    <div class="why__illustration">
+      <img src="https://picsum.photos/seed/whyus1/300/300" alt="Illustration representing fast claims">
+    </div>
+    <h3 class="why__title">Fast claims</h3>
+    <p class="why__text">Most claims are paid within days, not weeks.</p>
+  </div>
+  <div class="why__item">
+    <div class="why__illustration">
+      <img src="https://picsum.photos/seed/whyus2/300/300" alt="Illustration representing 24/7 vet video">
+    </div>
+    <h3 class="why__title">24/7 vet video</h3>
+    <p class="why__text">Speak to a vet any hour, any day.</p>
+  </div>
+  <div class="why__item">
+    <div class="why__illustration">
+      <img src="https://picsum.photos/seed/whyus3/300/300" alt="Illustration representing no hidden fees">
+    </div>
+    <h3 class="why__title">No hidden fees</h3>
+    <p class="why__text">Plain-English policies, always.</p>
+  </div>
+  <div class="why__item">
+    <div class="why__illustration">
+      <img src="https://picsum.photos/seed/whyus4/300/300" alt="Illustration representing award winning cover">
+    </div>
+    <h3 class="why__title">Award winning</h3>
+    <p class="why__text">Recognised by Defaqto and Moneyfacts.</p>
+  </div>
+</div>
+    <div class="why__footer">
+      <a href="#plans" class="btn-cta">Get a quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="vet-advice">
+  <div class="vet-advice__inner">
+    <div class="vet-advice__content">
+      <span class="eyebrow">Included with every plan</span>
+      <h2>24/7 Vet Video Advice + Symptom Checker</h2>
+      <p>Not sure if it's a trip to the vet or nothing to worry about? Talk it through with a qualified vet from your sofa, any time of day.</p>
+      <a href="#" class="btn-cta">Ask a vet <i class="fa-solid fa-video"></i></a>
+    </div>
+    <div class="vet-advice__media">
+      <img src="https://picsum.photos/seed/vetdog2/560/460" alt="Vet examining a dog on a video call">
+    </div>
+  </div>
+</section>
+
+<section class="perks" id="perks">
+  <div class="perks__inner">
+    <div class="perks__header">
+      <span class="eyebrow">More than insurance</span>
+      <h2>Perks &amp; Offers</h2>
+    </div>
+
+    <div class="perks__tabs">
+      <button class="perks__tab perks__tab--active"><i class="fa-solid fa-shield-heart"></i> Insurance</button>
+      <button class="perks__tab"><i class="fa-solid fa-cat"></i> Just4Cats</button>
+      <button class="perks__tab"><i class="fa-solid fa-stethoscope"></i> Vets</button>
+      <button class="perks__tab"><i class="fa-solid fa-right-left"></i> Switch &amp; Save</button>
+      <button class="perks__tab"><i class="fa-regular fa-square-check"></i> Register</button>
+    </div>
+
+    <div class="perks__row">
+      <button class="perks__arrow" id="perksPrev" aria-label="Previous perks"><i class="fa-solid fa-chevron-left"></i></button>
+
+      <div class="perks__viewport">
+        <div class="perks__track" id="perksTrack">
+          <div class="perk-card">
+            <i class="fa-solid fa-piggy-bank perk-card__icon"></i>
+            <h3 class="perk-card__title">10% off</h3>
+            <p class="perk-card__text">Save on prescription diet foods with our partner vets.</p>
+          </div>
+          <div class="perk-card">
+            <i class="fa-solid fa-bone perk-card__icon"></i>
+            <h3 class="perk-card__title">15% off</h3>
+            <p class="perk-card__text">Your first two boxes of premium dog treats.</p>
+          </div>
+          <div class="perk-card">
+            <i class="fa-solid fa-house-medical perk-card__icon"></i>
+            <h3 class="perk-card__title">£50 off</h3>
+            <p class="perk-card__text">Annual health checks at any partner clinic.</p>
+          </div>
+          <div class="perk-card">
+            <i class="fa-solid fa-scissors perk-card__icon"></i>
+            <h3 class="perk-card__title">20% off</h3>
+            <p class="perk-card__text">Grooming sessions at selected salons nationwide.</p>
+          </div>
+          <div class="perk-card">
+            <i class="fa-solid fa-dumbbell perk-card__icon"></i>
+            <h3 class="perk-card__title">Free trial</h3>
+            <p class="perk-card__text">One month of a partner pet-fitness app, on us.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="perks__arrow" id="perksNext" aria-label="Next perks"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <div class="perks__dots" id="perksDots"></div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="team__inner">
+    <div class="team__card">
+      <div class="team__media">
+        <img src="https://picsum.photos/seed/officeteam5/600/460" alt="The Perfect Pet Insurance team at the office">
+      </div>
+      <div class="team__content">
+        <h2>Meet the team behind Perfect Pet Insurance</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet dolor vitae eros finibus, quis blandit magna tristique. Fusce ornare vel augue euismod vestibulum. Mauris enim lacus, semper quis erat sed, porta accumsan arcu.</p>
+        <a href="#footer" class="team__cta">Read more about us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="refer">
+  <div class="refer__inner">
+    <div class="refer__cards">
+      <div class="refer__card refer__card--paypal">Pay<span>Pal</span></div>
+      <div class="refer__card refer__card--amazon">amazon<span>Gift Card</span></div>
+      <div class="refer__card refer__card--trust">
+        <strong>National Trust</strong>
+        <small>Gift Card — thank you for helping to look after nature, beauty and history.</small>
+      </div>
+    </div>
+
+    <div class="refer__content">
+      <h2>Refer a friend and get a £20 treat</h2>
+      <p>For every friend that joins the Perfect Pet pack, you'll both get a £20 treat.</p>
+      <p>Fill in your details, start sharing, start earning.</p>
+
+      <form class="refer__form" onsubmit="return false;">
+        <input class="refer__input" type="text" placeholder="Full name" aria-label="Full name" required>
+        <input class="refer__input" type="email" placeholder="Email address" aria-label="Email address" required>
+        <button type="submit" class="refer__submit">Generate my referral link</button>
+      </form>
+
+      <p class="refer__legal">By participating in the promotion, you accept the Buyapowa Platform <a href="#">Terms and Conditions</a> and the Promotion <a href="#">Terms and Conditions</a>.</p>
+    </div>
+  </div>
+</section>
+
+<div class="trust-badges">
+  <div class="badge-trustpilot">
+    <div class="badge-trustpilot__name"><i class="fa-solid fa-star" style="color:#00b67a;"></i> Trustpilot</div>
+    <div class="badge-trustpilot__stars">★★★★★</div>
+    <div class="badge-trustpilot__score">TrustScore <strong>4.6</strong> | <a href="#">15,960 reviews</a></div>
+  </div>
+
+  <div class="badge-moneyfacts">
+    <div class="badge-moneyfacts__left">Moneyfacts<br>★★★★★</div>
+    <div class="badge-moneyfacts__right">DOG INSURANCE<br>2025</div>
+  </div>
+
+  <div class="badge-award">
+    <div class="badge-award__icon"></div>
+    <div>Best pet insurance provider<br><strong>Winner 2025</strong></div>
+    <div class="badge-award__divider"></div>
+    <div class="badge-award__partner"><i class="fa-solid fa-circle" style="color:#4ade80;font-size:0.5rem;"></i> Smart money people</div>
+  </div>
+</div>
+
+<section class="final-cta">
+  <div class="final-cta__inner">
+    <div class="final-cta__content">
+      <h2>Join the perfect pet pack today for cover that speaks your pets language</h2>
+      <p>Join over 100,000 of the UK's pet owners and become part of our pack.</p>
+      <a href="#plans" class="btn-cta">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="final-cta__lock"><i class="fa-solid fa-lock"></i> Regulated by the Financial Conduct Authority.</div>
+    </div>
+
+   <div class="final-cta__media">
+  <svg width="0" height="0" style="position:absolute;">
+    <defs>
+      <clipPath id="pShapeClip" clipPathUnits="objectBoundingBox">
+        <path d="M0.12,0
+                 L0.88,0
+                 C0.95,0 1,0.05 1,0.12
+                 L1,0.58
+                 C1,0.65 0.95,0.7 0.88,0.7
+                 L0.34,0.7
+                 L0.17,1
+                 L0.09,0.7
+                 L0,0.7
+                 L0,0.12
+                 C0,0.05 0.05,0 0.12,0
+                 Z" />
+      </clipPath>
+    </defs>
+  </svg>
+
+  <img class="final-cta__media-img" src="https://picsum.photos/seed/beachdog9/500/525" alt="A boy playing tug of war with a dog on the beach">
+
+  <svg class="final-cta__squiggle" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 90
+             C25 40, 90 15, 130 55
+             C165 90, 130 130, 95 140
+             C60 150, 55 190, 95 205
+             C140 222, 160 185, 200 195
+             C235 203, 245 235, 280 230"
+          stroke="#e8543d" stroke-width="9" fill="none" stroke-linecap="round"/>
+  </svg>
+</div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="faq__inner">
+    <div>
+      <div class="faq__header">
+        <h2>Pet Insurance<span class="muted">FAQ's</span></h2>
+        <p>Find out more about Perfect Pet insurance policies with these common questions about pet insurance cover.</p>
+      </div>
+      <img class="faq__illustration" src="https://picsum.photos/seed/faqwalk1/320/280" alt="Illustration of a girl and elderly woman walking a dog">
+    </div>
+
+    <div class="faq__list">
+      <div class="faq-item">
+        <button class="faq-item__question">What does pet insurance cover? <i class="fa-solid fa-chevron-down faq-item__icon"></i></button>
+        <div class="faq-item__answer"><p>It covers vet fees for accidents and illness, and depending on your plan, can include dental, complementary therapies, and third-party liability.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question">How much does pet insurance cost? <i class="fa-solid fa-chevron-down faq-item__icon"></i></button>
+        <div class="faq-item__answer"><p>It depends on your pet's age, breed, location, and the level of cover you choose. Get a quote to see your exact price.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question">Can I insure an older pet? <i class="fa-solid fa-chevron-down faq-item__icon"></i></button>
+        <div class="faq-item__answer"><p>Yes, we cover pets of all ages, though premiums and cover levels may vary for senior pets.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question">How do I make a claim? <i class="fa-solid fa-chevron-down faq-item__icon"></i></button>
+        <div class="faq-item__answer"><p>Submit your claim through the app or online portal, and our team will process it, most are settled within a few working days.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question">What is lifetime pet insurance? <i class="fa-solid fa-chevron-down faq-item__icon"></i></button>
+        <div class="faq-item__answer"><p>Lifetime cover means your vet fee limit renews each year, so you can keep claiming for ongoing or recurring conditions year after year.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question">Can I switch providers mid-policy? <i class="fa-solid fa-chevron-down faq-item__icon"></i></button>
+        <div class="faq-item__answer"><p>Yes, though we'd recommend waiting until your current policy renews to avoid a break in continuous cover.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="footer">
+  <div class="footer__inner">
+    <div>
+      <a href="#" class="footer__brand">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.8C.7 8.7 2.2 5 6 5c2 0 3.3 1.1 4 2 1.7-1.9 3-2 4-2 3.8 0 5.3 3.7 3.5 7.2C19 16.65 12 21 12 21z" fill="#e8543d"/></svg>
+        Perfect Pet
+      </a>
+      <div class="footer__socials">
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h4 class="footer__heading">Sniff for more</h4>
+      <div class="footer__links">
+        <a href="#">About Us</a>
+        <a href="#">Compare Pet Insurance</a>
+        <a href="#">Pet Insurance Guides</a>
+        <a href="#">How Pet Insurance Premiums are Calculated</a>
+        <a href="#">Dog Insurance</a>
+        <a href="#">Older Dog Insurance</a>
+        <a href="#">Lifetime Pet Insurance</a>
+      </div>
+    </div>
+
+    <div>
+      <h4 class="footer__heading">Nap time</h4>
+      <div class="footer__links">
+        <a href="#">Cookie Policy</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Business</a>
+      </div>
+    </div>
+
+    <div>
+      <h4 class="footer__heading">Important stuff</h4>
+      <div class="footer__links">
+        <a href="#">How to Complain</a>
+        <a href="#">Make a Claim</a>
+        <a href="#">Policy Wordings</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__copyright">&copy; Copyright Perfect Pet 2026</div>
+    <div class="footer__legal">
+      <p>All premiums quoted include Insurance Premium Tax (IPT) at the prevailing rate.</p>
+      <p>Perfect Pet is a trading name of Tedaisy Insurance Brokers Limited (Registered in England and Wales No 09981861), an appointed representative of Tedaisy Underwriting Limited (Registered in England and Wales No 06904209) who is authorised and regulated by the Financial Conduct Authority firm reference 504604.</p>
+      <p>Registered office: Warner House, 123 Castle Street, Salisbury, SP1 3TB.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

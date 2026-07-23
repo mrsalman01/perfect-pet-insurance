@@ -1,0 +1,50 @@
+// ---- Colors (picked to match the reference design) ----
+$color-navy:        #16233d;   // dark sections: header accents, footer, vet banner
+$color-navy-light:  #1f3155;   // cards sitting on top of navy
+$color-cream:       #f3efe6;   // page background
+$color-cream-dark:  #eae4d5;   // alternate section background
+$color-white:       #ffffff;
+$color-coral:       #e8543d;   // primary accent — buttons, icons, squiggle line
+$color-coral-dark:  #cf432d;   // hover state for coral
+$color-ink:         #22252b;   // main body text
+$color-muted:       #6b7280;   // secondary/paragraph text
+$color-border:      #e2ddd0;
+$color-star:        #00b67a;   // Trustpilot green
+$color-navy-deep:   #18222a;
+$color-faq-bg:      #3a4a5c;
+
+// ---- Typography ----
+$font-heading: 'Poppins', 'Segoe UI', sans-serif;
+$font-body:    'Inter', 'Segoe UI', sans-serif;
+
+$fs-base: 16px;
+$fs-sm:   0.875rem;
+$fs-body: 1rem;
+$fs-lg:   1.125rem;
+$fs-h3:   1.5rem;
+$fs-h2:   2rem;
+$fs-h1:   2.75rem;
+
+// ---- Spacing scale — always use these instead of random px values ----
+$space-xs:  0.5rem;
+$space-sm:  1rem;
+$space-md:  1.5rem;
+$space-lg:  2.5rem;
+$space-xl:  4rem;
+$space-2xl: 6rem;
+
+// ---- Layout ----
+$container-width: 1180px;
+$radius-sm:   8px;
+$radius-md:   16px;
+$radius-lg:   24px;
+$radius-pill: 999px;
+
+// ---- Shadows ----
+$shadow-card:       0 8px 24px rgba(22, 35, 61, 0.08);
+$shadow-card-hover: 0 14px 32px rgba(22, 35, 61, 0.14);
+
+// ---- Breakpoints (used by the respond() mixin) ----
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-laptop: 1024px;

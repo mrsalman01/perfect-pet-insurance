@@ -1,0 +1,46 @@
+// HERO
+
+
+.hero {
+  @include section-padding;
+  position: relative;
+  overflow: hidden;
+
+  &__inner {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-xl;
+    align-items: center;
+    position: relative;
+
+    @include respond(laptop) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  &__content { position: relative; z-index: 2; }
+  &__title   { margin-bottom: $space-sm; }
+  &__text    { max-width: 40ch; margin-bottom: $space-md; }
+
+  &__trust {
+    @include flex(flex-start, center, $space-xs);
+    margin-top: $space-md;
+    font-size: $fs-sm;
+    color: $color-muted;
+    @include respond(laptop) { justify-content: center; }
+  }
+
+  &__media {
+    position: relative;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    img { width: 100%; height: 100%; object-fit: cover; }
+  }
+
+  @include respond(laptop) {
+    &__text { margin-inline: auto; }
+  }
+}

@@ -1,0 +1,53 @@
+// BASE — reset + global typography that every page inherits
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: $fs-base; }
+
+body {
+  font-family: $font-body;
+  font-size: $fs-body;
+  color: $color-ink;
+  background-color: $color-cream;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; }
+
+h1, h2, h3, h4 {
+  font-family: $font-heading;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-navy;
+}
+h1 { font-size: $fs-h1; }
+h2 { font-size: $fs-h2; }
+h3 { font-size: $fs-h3; }
+p  { color: $color-muted; }
+
+.eyebrow {
+  display: inline-block;
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: $fs-sm;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-coral;
+  margin-bottom: $space-xs;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection { background-color: $color-coral; color: $color-white; }
+:focus-visible { outline: 3px solid $color-coral; outline-offset: 2px; }

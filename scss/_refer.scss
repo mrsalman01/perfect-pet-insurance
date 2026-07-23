@@ -1,0 +1,186 @@
+.refer {
+  @include section-padding;
+  padding-block-end: 0;
+
+  &__inner {
+    @include container;
+    background-color: $color-navy;
+    border-radius: $radius-lg;
+    padding: $space-lg;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: $space-xl;
+    @include respond(laptop) { grid-template-columns: 1fr; text-align: center; }
+  }
+
+  // ---- stacked / tilted card visuals ----
+  &__cards {
+    position: relative;
+    height: 320px;
+    @include respond(laptop) { margin-inline: auto; max-width: 300px; height: auto; }
+  }
+
+  &__card {
+    position: absolute;
+    width: 62%;
+    border-radius: $radius-sm;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    padding: $space-md;
+
+    @include respond(laptop) {
+      position: static;
+      width: 100%;
+      transform: none !important;
+      margin-bottom: $space-xs;
+      padding: $space-sm;
+      box-shadow: none;
+    }
+  }
+
+  &__card--paypal {
+    top: 0; left: 0;
+    background-color: $color-white;
+    transform: rotate(-8deg);
+    font-family: $font-heading;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #003087;
+    span { color: #009cde; }
+    @include respond(laptop) { font-size: 1.3rem; }
+  }
+
+  &__card--amazon {
+    top: 95px; left: 22%;
+    background-color: #111;
+    transform: rotate(5deg);
+    color: $color-white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    span { color: #ff9900; display: block; font-size: $fs-body; font-weight: 400; margin-top: 0.4rem; }
+    @include respond(laptop) { font-size: 1.1rem; }
+  }
+
+  &__card--trust {
+    top: 190px; left: 6%;
+    background-color: #6b7280;
+    transform: rotate(-4deg);
+    color: $color-white;
+
+    strong { display: block; font-size: 1.4rem; margin-bottom: 0.4rem; }
+    small { font-size: $fs-sm; opacity: 0.85; display: block; line-height: 1.4; }
+    @include respond(laptop) { strong { font-size: 1.1rem; } }
+  }
+
+  // ---- right side content ----
+  &__content {
+    color: $color-white;
+    h2 { color: $color-white; margin-bottom: $space-sm; }
+    p  { color: rgba($color-white, 0.8); margin-bottom: $space-xs; font-size: $fs-sm; }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+    margin-top: $space-md;
+  }
+
+  &__input {
+    padding: 1rem 1.3rem;
+    border-radius: $radius-md;
+    border: none;
+    font-size: $fs-body;
+  }
+
+  &__submit {
+    background: transparent;
+    border: 1px solid rgba($color-white, 0.5);
+    border-radius: $radius-md;
+    color: $color-white;
+    font-family: $font-heading;
+    font-weight: 600;
+    padding: 1rem 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    &:hover { background-color: rgba($color-white, 0.1); }
+  }
+
+  &__legal {
+    font-size: 0.75rem;
+    color: rgba($color-white, 0.5);
+    margin-top: $space-sm;
+    line-height: 1.6;
+    a { color: rgba($color-white, 0.7); text-decoration: underline; }
+  }
+}
+
+// ---- Trust badges row — below the card, on the plain cream page ----
+.trust-badges {
+  @include container;
+  @include flex(center, center, $space-xl);
+  flex-wrap: wrap;
+  padding-block: $space-lg;
+  @include respond(tablet) { gap: $space-md; }
+}
+
+.badge-trustpilot {
+  text-align: left;
+
+  &__name {
+    @include flex(flex-start, center, 0.35rem);
+    font-weight: 700;
+    color: $color-ink;
+    margin-bottom: 0.3rem;
+  }
+  &__stars { color: $color-star; letter-spacing: 2px; font-size: 1.2rem; }
+  &__score { font-size: $fs-sm; color: $color-ink; margin-top: 0.3rem; }
+}
+
+.badge-moneyfacts {
+  @include flex(flex-start, stretch, 0);
+  border: 1px solid #d4a94a;
+  border-radius: $radius-sm;
+  overflow: hidden;
+  font-size: $fs-sm;
+
+  &__left {
+    background-color: $color-white;
+    padding: 0.5rem 0.9rem;
+    color: #d4a94a;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__right {
+    background-color: #1e3a8a;
+    color: $color-white;
+    padding: 0.5rem 0.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.badge-award {
+  @include flex(flex-start, center, $space-sm);
+  background-color: $color-navy;
+  border-radius: $radius-pill;
+  padding: 0.5rem 1.2rem 0.5rem 0.5rem;
+  color: $color-white;
+  font-size: $fs-sm;
+
+  &__icon {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background-color: #5ce1e6;
+    flex-shrink: 0;
+  }
+  strong { display: block; color: #5ce1e6; }
+
+  &__divider { width: 1px; align-self: stretch; background-color: rgba($color-white, 0.2); }
+
+  &__partner {
+    @include flex(flex-start, center, 0.35rem);
+    font-weight: 600;
+  }
+}

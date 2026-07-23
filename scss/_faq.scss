@@ -1,0 +1,69 @@
+// FAQ — full-width dark navy section, dark accordion cards, two-tone heading
+
+.faq {
+  @include section-padding;
+  background-color: $color-faq-bg;;
+
+  &__inner {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: $space-xl;
+    @include respond(laptop) { grid-template-columns: 1fr; }
+  }
+
+  &__header {
+    h2 {
+      color: $color-white;
+      .muted { color: rgba($color-white, 0.4); display: block; }
+    }
+    p {
+      margin-top: $space-sm;
+      max-width: 32ch;
+      color: rgba($color-white, 0.75);
+    }
+  }
+
+  &__illustration {
+    margin-top: $space-xl;
+    max-width: 320px;
+    opacity: 0.9;
+    @include respond(laptop) { margin-inline: auto; }
+  }
+
+  &__list { display: flex; flex-direction: column; gap: $space-sm; }
+}
+
+.faq-item {
+  background-color: $color-navy-deep;
+  border-radius: $radius-md;
+  overflow: hidden;
+
+  &__question {
+    @include flex(space-between, center);
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: $space-md;
+    font-family: $font-heading;
+    font-weight: 600;
+    font-size: $fs-lg;
+    color: $color-white;
+    cursor: pointer;
+  }
+
+  &__icon { flex-shrink: 0; color: $color-coral; transition: transform 0.25s ease; }
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    p { padding: 0 $space-md $space-md; font-size: $fs-sm; color: rgba($color-white, 0.7); }
+  }
+
+  &.is-open {
+    .faq-item__icon   { transform: rotate(180deg); }
+    .faq-item__answer { max-height: 200px; }
+  }
+}

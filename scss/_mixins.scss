@@ -70,7 +70,6 @@
   &:hover { box-shadow: $shadow-card-hover; transform: translateY(-4px); }
 }
 
-// THIS IS THE VALUE THAT WAS TOO BIG — ab chhota kar diya hai
 @mixin section-padding {
   padding-block: 2.5rem;
   @include respond(tablet) { padding-block: 1.75rem; }

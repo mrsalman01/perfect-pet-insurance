@@ -44,7 +44,7 @@
     @include respond(laptop) { display: block; }
   }
 
-  // mobile dropdown state — toggled by JS later
+  // mobile dropdown state
   @include respond(laptop) {
     &__nav.is-open {
       display: flex;

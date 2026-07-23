@@ -9,9 +9,9 @@
   border-radius: $radius-lg;
   padding: $space-lg;
   display: grid;
-  grid-template-columns: 1fr 0.85fr;     // ← pehle 1.2fr 0.9fr tha, ab image ko thoda bara space diya
+  grid-template-columns: 1fr 0.85fr;
   align-items: center;
-  gap: $space-md;                         // ← pehle $space-lg tha, ab kam kiya — beech ka khali gap kam hoga
+  gap: $space-md;  
   @include respond(laptop) { grid-template-columns: 1fr; text-align: center; gap: $space-xl; }
 }
 
@@ -29,7 +29,7 @@
     @include respond(laptop) { justify-content: center; }
   }
 
-  // ---- the shaped photo mask ----
+
   &__media {
     position: relative;
     width: 100%;
